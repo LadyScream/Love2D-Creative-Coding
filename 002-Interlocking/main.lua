@@ -14,10 +14,10 @@ function love.load()
 	speed = 0.0025
 	offset = math.pi
 	canvas:renderTo(function()
-		setColor( 255, 200, 200 )
+		setColor( 255/255, 200/255, 200/255 )
 		rectangle( "fill", 0, 0, width, height )
 	end)
-	colors = { { 222, 137, 190 }, { 164, 80, 139 }, { 115, 75, 94 }, { 234, 191, 203 } }
+	colors = { { 222/255, 137/255, 190/255 }, { 164/255, 80/255, 139/255 }, { 115/255, 75/255, 94/255 }, { 234/255, 191/255, 203 } }
 
 end
 

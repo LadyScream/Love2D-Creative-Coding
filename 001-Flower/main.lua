@@ -9,7 +9,7 @@ function love.load()
 	segments = 20
 	speed = 750;
 	canvas:renderTo(function()
-		love.graphics.setColor( 255, 200, 200 )
+		love.graphics.setColor( 255/255, 200/255, 200/255 )
 		love.graphics.rectangle( "fill", 0, 0, width, height )
 	end)
 end
@@ -27,7 +27,7 @@ function love.update( dt )
 					local tx, ty = 0, 0 
 					radius = radius - 0.01
 					for j = 0, segments do
-						love.graphics.setColor( j * ( 24 / segments ) + 222, j * ( 70 / segments ) + 137, j * ( 53 / segments ) + 190, 255 )
+						love.graphics.setColor( j * ( 24/255 / segments ) + 222/255, j * ( 70/255 / segments ) + 137/255, j * ( 53/255 / segments ) + 190/255, 255/255 )
 						local lx = tx
 						local ly = ty
 						tx = tx + x
@@ -41,7 +41,7 @@ function love.update( dt )
 end
 
 function love.draw()
-	love.graphics.setColor( 255, 255, 255 )
+	love.graphics.setColor( 1, 1, 1 )
 	love.graphics.draw( canvas, 0, 0 )
 end
 

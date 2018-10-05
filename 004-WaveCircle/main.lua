@@ -4,7 +4,7 @@ function love.load()
 
 	love.window.setMode( 600, 600 )
 	width, height = love.graphics.getDimensions()
-	love.graphics.setBackgroundColor( 255, 200, 200 )
+	love.graphics.setBackgroundColor( 255/255, 200/255, 200/255 )
 	canvas = love.graphics.newCanvas()
 	radius = 200
 	angle = 0
@@ -27,7 +27,7 @@ function color( index, x, y )
 	r = lp.map( d, 0, radius, 122/4, 222 )
 	g = lp.map( d, 0, radius, 89/4, 137 )
 	b = lp.map( d, 0, radius, 128/4, 190 )
-	return { r, g, b }
+	return { r/255, g/255, b/255 }
 
 end
 
@@ -73,7 +73,7 @@ function love.draw()
 		end
 
 	end)
-	love.graphics.setColor( 255, 255, 255 )
+	love.graphics.setColor( 1, 1, 1 )
 	for i = 1, repetitions do
 
 		love.graphics.draw( canvas, width/2, height/2, i * math.pi * 2 / repetitions, 1, 1, width/2, height/2 )

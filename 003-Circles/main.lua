@@ -54,10 +54,10 @@ function love.draw()
 
 	canvas:renderTo(function()
 
-		love.graphics.setColor( 222, 137, 190 )
+		love.graphics.setColor( 222/255, 137/255, 190/255 )
 		love.graphics.rectangle( "fill", 0, 0, width, height )
 		if ( record ) then
-			love.graphics.setColor( 255, 255, 255, 3 )
+			love.graphics.setColor( 1, 1, 1, 3/255 )
 			love.graphics.circle( "fill", width / 2, height / 2, 150 )
 			for i, v in ipairs( circles ) do
 
@@ -89,7 +89,7 @@ function love.draw()
 	if ( show ) then
 		love.graphics.setShader( shader )
 	end
-	love.graphics.setColor( 255, 255, 255 )
+	love.graphics.setColor( 1, 1, 1 )
 	love.graphics.draw( canvas )
 	love.graphics.setShader()
 
